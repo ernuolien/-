@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Feeder</title>
+    <style type="text/css">
+        body {
+            background-color: rgb(230, 222, 198);
+        }
+
+        .box {
+            width: 960px;
+            display: flex;
+            margin: auto;
+        }
+
+        .menu {
+            width: 300px;
+            height: 550px;
+            background-color: rgb(128, 235, 190);
+            margin: 10px;
+            border-radius: 10px;
+            padding: 5px;
+            opacity: 0.65;
+        }
+
+        .cat-box {
+            width: 100%;
+            height: 550px;
+            background-color: pink;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 5px;
+            opacity: 0.75;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-item {
+            text-align: left;
+            line-height: 200%;
+            position: relative;
+            left: 50px;
+            bottom: 25px;
+        }
+
+        .reply {
+            border-radius: 7.5px;
+            color: black;
+            padding: 0px 0px 0px 10px;
+        }
+
+        .top {
+            position: relative;
+            bottom: 30px;
+        }
+
+        button {
+            cursor: pointer;
+            border-radius: 5px;
+            position: relative;
+            left: 60px;
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            background-color: gray;
+        }
+
+        .title {
+            background-color: black;
+            color: white;
+        }
+
+        .row {
+            display: flex;
+            margin: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .col {
+            margin: 10px;
+            height: 205px;
+            border-style: solid;
+            border-color: rgb(128, 65, 76)
+        }
+
+        .name {
+            background-color: rgb(231, 133, 150);
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 0px;
+        }
+
+        .trig-pic {
+            position: relative;
+            bottom: 220px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="menu">
+            <h2>Feed Me</h2>
+            <p><strong>Choose one or all cats to feed.</strong></p>
+            <br>
+
+
+            <form name="form_name" id="form_name">
+                <div class="input-item">
+                    <input type="radio" name="Angela" value="Angela">Angela <br>
+                    <input type="radio" name="Lynn" value="Lynn">Lynn<br>
+                    <input type="radio" name="Devil" value="Devil">Devil<br>
+                    <input type="radio" name="Amy" value="Amy">Amy<br>
+                    <input type="radio" name="John" value="John">John<br>
+                </div>
+            </form>
+
+            <div class="top">
+                <p style="text-align: center;"><strong>Specific breed?</strong></p>
+
+                <form action="">
+                    <input type="text" name="reply" placeholder="Empty for all breeds..." class="reply">
+                </form>
+                <br>
+                <!-- <input type="submit" value="submit" class="button" onclick="getCountry()"> -->
+                <!-- <button onclick="getCountry()">Submit</button> -->
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+
+
+
+
+
+        
+        <div class="cat-box">
+            <div class="title">
+                <h2>Cats Album</h2>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col ch1">
+                        <img src="cat1.jpg" alt="Angela" width="230px">
+                        <h3 class="name">Angela</h3>
+                        <div class="trig-pic pic1" style="display:none">
+                            <img src="cat1_inverse.jpg" width="230px">
+                        </div>
+                        <div class="trig-pic" style="display:none" id="Angela">
+                            <img src="feed.png" alt="feed" width="230px">
+                        </div>
+                    </div>
+                    <div class="col ch2 ">
+                        <img src="cat2.jpg" alt="Lynn" width="230px">
+                        <h3 class="name">Lynn</h3>
+                        <div class="trig-pic pic2" style="display:none">
+                            <img src="cat2_inverse.jpg" width="230px">
+                        </div>
+
+                        <div class="trig-pic" style="display:none" id="Lynn">
+                            <img src="feed.png" alt="feed" width="230px">
+                        </div>
+                    </div>
+
+
+                    <div class="col ch3">
+                        <img src="cat3.jpg" alt="Devil" width="230px">
+                        <h3 class="name">Devil</h3>
+                        <div class="trig-pic pic3" style="display:none">
+                            <img src="cat3_inverse.jpg" width="230px">
+                        </div>
+
+                        <div class="trig-pic" style="display:none" id="Devil">
+                            <img src="feed.png" alt="feed" width="230px">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col ch4">
+                        <img src="cat4.jpg" alt="Amy" width="230px">
+                        <h3 class="name">Amy</h3>
+                        <div class="trig-pic pic4" style="display:none">
+                            <img src="cat4_inverse.jpg" width="230px">
+                        </div>
+                        <div class="trig-pic" style="display:none" id="Amy">
+                            <img src="feed.png" alt="feed" width="230px">
+                        </div>
+                    </div>
+                    <div class="col ch5">
+                        <img src="cat5.jpg" alt="John" width="230px">
+                        <h3 class="name">John</h3>
+                        <div class="trig-pic pic5" style="display:none">
+                            <img src="cat5_inverse.jpg" width="230px">
+                        </div>
+                        <div class="trig-pic" style="display:none" id="John">
+                            <img src="feed.png" alt="feed" width="230px">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ch1').click(function () {
+                $('.pic1').toggle();
+                var option1 = ($('input[name=Angela]:checked').val());
+                $('#' + option1).hide();
+            })
+            $('.ch2').click(function () {
+                $('.pic2').toggle();
+                var option2 = ($('input[name=Lynn]:checked').val());
+                $('#' + option2).hide();
+            })
+            $('.ch3').click(function () {
+                $('.pic3').toggle();
+                var option3 = ($('input[name=Devil]:checked').val());
+                $('#' + option3).hide();
+            })
+            $('.ch4').click(function () {
+                $('.pic4').toggle();
+                var option4 = ($('input[name=Amy]:checked').val());
+                $('#' + option4).hide();
+            })
+            $('.ch5').click(function () {
+                $('.pic5').toggle();
+                var option5 = ($('input[name=John]:checked').val());
+                $('#' + option5).hide();
+            })
+
+
+
+        })
+
+        $("#submit").click(function () {
+            var option1 = ($('input[name=Angela]:checked').val());
+            $('.pic1').hide();
+            $('#' + option1).show();
+
+            var option2 = ($('input[name=Lynn]:checked').val());
+            $('.pic2').hide();
+            $('#' + option2).show();
+
+            var option3 = ($('input[name=Devil]:checked').val());
+            $('.pic3').hide();
+            $('#' + option3).show();
+
+            var option4 = ($('input[name=Amy]:checked').val());
+            $('.pic4').hide();
+            $('#' + option4).show();
+
+            var option5 = ($('input[name=John]:checked').val());
+            $('.pic5').hide();
+            $('#' + option5).show();
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
